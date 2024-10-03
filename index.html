@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Tool for Visually Impaired</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <h1>Web Design Tool for Visually Impaired</h1>
+    </header>
+    <main id="main-content">
+        <section id="keyboard-shortcuts" aria-label="Keyboard shortcuts">
+            <h2>Keyboard Shortcuts</h2>
+            <ul>
+                <li>Alt + T: Add Text</li>
+                <li>Alt + I: Add Image</li>
+                <li>Alt + B: Add Button</li>
+                <li>Alt + H: Toggle High Contrast</li>
+                <li>Alt + D: Toggle Dark Mode</li>
+                <li>Alt + V: Toggle Voice Recognition</li>
+                <li>Alt + F: Toggle Haptic Feedback</li>
+            </ul>
+        </section>
+        <section id="color-scheme">
+            <h2>Color Scheme Selection</h2>
+            <select id="theme-selector" aria-label="Select color theme">
+                <option value="default">Default</option>
+                <option value="high-contrast">High Contrast</option>
+                <option value="dark-mode">Dark Mode</option>
+                <option value="blue-yellow">Blue-Yellow</option>
+                <option value="custom">Custom</option>
+            </select>
+            <div id="custom-colors" style="display: none;">
+                <label for="background-color">Background Color:</label>
+                <input type="color" id="background-color" value="#ffffff">
+                <label for="text-color">Text Color:</label>
+                <input type="color" id="text-color" value="#000000">
+                <label for="accent-color">Accent Color:</label>
+                <input type="color" id="accent-color" value="#3498db">
+                <button id="apply-custom-colors">Apply Custom Colors</button>
+            </div>
+        </section>
+        <section id="haptic-feedback">
+            <h2>Haptic Feedback</h2>
+            <button id="toggle-haptic-feedback" aria-pressed="true">Toggle Haptic Feedback</button>
+        </section>
+        <section id="text-to-speech">
+            <h2>Text-to-Speech Settings</h2>
+            <label for="voice-select">Voice:</label>
+            <select id="voice-select" aria-label="Select voice for text-to-speech"></select>
+            <label for="rate-input">Speed:</label>
+            <input type="range" id="rate-input" min="0.5" max="2" step="0.1" value="1">
+            <label for="volume-input">Volume:</label>
+            <input type="range" id="volume-input" min="0" max="1" step="0.1" value="1">
+        </section>
+        <section id="text-size">
+            <h2>Text Size</h2>
+            <label for="text-size-slider">Adjust Text Size:</label>
+            <input type="range" id="text-size-slider" min="12" max="32" step="2" value="16">
+            <span id="text-size-value">16px</span>
+        </section>
+        <section id="design-tools">
+            <h2>Design Tools</h2>
+            <button id="add-text" aria-label="Add text element to preview area">Add Text</button>
+            <button id="add-image" aria-label="Add image element to preview area">Add Image</button>
+            <button id="add-button" aria-label="Add button element to preview area">Add Button</button>
+        </section>
+        <section id="preview">
+            <h2>Preview</h2>
+            <div id="preview-area" role="region" aria-label="Design preview area"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Web Design Tool for Visually Impaired</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
